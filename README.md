@@ -1,2 +1,3 @@
-# MyPortfolio_Redux
-Portfolio rebuilt using Redux
+# My Portfolio_Redux
+
+## React + Redux + TypeScript
