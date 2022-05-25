@@ -8,6 +8,10 @@
 npx create-next-app portfolio_redux --ts
 ```
 
+### 開発環境について
+
+- Node.js v16.15.0
+
 ### ディレクトリ構成
 
 ```ts
@@ -42,4 +46,10 @@ npx create-next-app portfolio_redux --ts
 
 ### 使用パッケージ
 
-### aaa
+### コンポーネント作成にあたって
+
+VSCode の拡張機能 `Next.js snippets` を導入し、下記を実行する。
+
+```ts
+nafe;
+```
