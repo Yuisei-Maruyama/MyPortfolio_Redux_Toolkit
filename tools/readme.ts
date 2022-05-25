@@ -6,7 +6,7 @@ const { dependencies, devDependencies } = packageJson;
 
 const targetHeadingIndex = readme.indexOf('### 使用パッケージ') + 11;
 // INFO: 使用パッケージテーブルを追加するための場所を指定
-const tableBodySetIndex = readme.indexOf('### aaa');
+const tableBodySetIndex = readme.indexOf('### コンポーネント作成にあたって');
 
 console.log(tableBodySetIndex - targetHeadingIndex);
 
