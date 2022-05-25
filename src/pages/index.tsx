@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Counter from '../src/components/Counter';
+import Counter from '../components/Counter';
 import { useDispatch, useSelector } from 'react-redux';
-import { CounterState } from '../src/slice/counterSlice';
+import { CounterState } from '../slice/counterSlice';
 
 const Home: NextPage = () => {
   // src/store/store.ts の counter を指している。
