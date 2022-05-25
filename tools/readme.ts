@@ -1,32 +1,60 @@
 import packageJson from '../package.json';
-import { readFileSync } from 'fs';
+import { readFileSync, writeFile } from 'fs';
 
-const readme = readFileSync('README.md', 'utf-8');
+let readme = readFileSync('README.md', 'utf-8');
+const { dependencies, devDependencies } = packageJson;
 
+const targetHeadingIndex = readme.indexOf('### 使用パッケージ') + 11;
 // INFO: 使用パッケージテーブルを追加するための場所を指定
 const tableBodySetIndex = readme.indexOf('### aaa');
 
-const { dependencies, devDependencies } = packageJson;
+console.log(tableBodySetIndex - targetHeadingIndex);
+
+// 使用パッケージテーブルを更新
+if (tableBodySetIndex - targetHeadingIndex > 2) {
+  console.log('上書き');
+}
 
 const name: string[] = [];
 const version: string[] = [];
-const desc: string[] = [
-  '@reduxjs/toolkit の説明です',
-  'next の説明です',
-  'normalizr の説明です',
-  'react の説明です',
-  'react-dom の説明です',
-  'react-redux の説明です',
-  'redux-persist の説明です',
-  '@types/node の説明です',
-  '@types/react の説明です',
-  '@types/react-dom の説明です',
-  '@types/react-redux の説明です',
-  'eslint の説明です',
-  'eslint-config-next の説明です',
-  'ts-node の説明です',
-  'typescript の説明です',
-];
+
+const getDesc = (packageName: string) => {
+  switch (packageName) {
+    case '@reduxjs/toolkit':
+      return '@reduxjs/toolkit の説明です';
+    case 'next':
+      return 'next の説明です';
+    case 'normalizr':
+      return 'normalizr の説明です';
+    case 'react':
+      return 'react の説明です';
+    case 'react-dom':
+      return 'react-dom の説明です';
+    case 'react-redux':
+      return 'react-redux の説明です';
+    case 'redux-persist':
+      return 'Storeの状態を永続化するパッケージ';
+    case '@types/node':
+      return '@types/node の説明です';
+    case '@types/react':
+      return '@types/react の説明です';
+    case '@types/react-dom':
+      return '@types/react-dom の説明です';
+    case '@types/react-redux':
+      return '@types/react-redux の説明です';
+    case 'eslint':
+      return 'eslint の説明です';
+    case 'eslint-config-next':
+      return 'eslint-config-next の説明です';
+    case 'ts-node':
+      return 'ts-node の説明です';
+    case 'typescript':
+      return 'typescript の説明です';
+    default:
+      break;
+  }
+  return '';
+};
 
 Object.entries(dependencies).map(([key, value]) => {
   name.push(key);
@@ -38,17 +66,20 @@ Object.entries(devDependencies).map(([key, value]) => {
   version.push(value);
 });
 
-let tableBodyBase = '| 技術 | version | 説明 |\n| ---- | ------- | ---- |\n';
+let tableBodyBase = '| 技術 | version | 備考 |\n| ---- | ------- | ---- |\n';
 
 for (let i = 0; i < name.length; i++) {
   tableBodyBase = tableBodyBase.concat(
-    `| ${name[i]} | ${version[i]} | ${desc[i] ? desc[i] : ''} |\n`
+    `| ${name[i]} | ${version[i]} | ${getDesc(name[i])} |\n`
   );
 }
 
 const convertReadme =
   readme.slice(0, tableBodySetIndex) +
-  `${tableBodyBase}\n\n` +
+  `${tableBodyBase}\n` +
   readme.slice(tableBodySetIndex);
 
-console.log(convertReadme);
+writeFile('README.md', convertReadme, (err) => {
+  if (err) throw err;
+  console.log('正常に書き込みが完了しました');
+});
