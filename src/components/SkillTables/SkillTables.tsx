@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react'
-import { Step } from '@/@types/types';
+import React from 'react'
+import { Step } from '@/@types/types'
 import { SkillTable } from '@/components'
-import { StepsState } from '@/slice/stepSlice';
-import { useSelector } from 'react-redux';
+import { StepsState } from '@/slice/stepSlice'
+import { useSelector } from 'react-redux'
 import { Box, Grid } from '@mui/material'
 
 const SkillTables: React.FC = () => {
-
-  const steps = useSelector((state: {steps: StepsState}) => state.steps.value)
+  const steps = useSelector((state: { steps: StepsState }) => state.steps.value)
 
   const frontEndProps: Step[] = []
   const backEndProps: Step[] = []
 
-  steps.forEach(step => {
+  steps.forEach((step) => {
     if (step.genre === 'FrontEnd') {
       frontEndProps.push(step)
     }
@@ -25,11 +24,11 @@ const SkillTables: React.FC = () => {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container>
         <Grid item sm={12} xs={12} md={12} lg={12} xl={6}>
-        <SkillTable
-          title="Front-End Goal Image"
-          link="https://github.com/Yuisei-Maruyama/MyPortfolio"
-          frontEndProps={frontEndProps}
-        />
+          <SkillTable
+            title="Front-End Goal Image"
+            link="https://github.com/Yuisei-Maruyama/MyPortfolio"
+            frontEndProps={frontEndProps}
+          />
         </Grid>
         <Grid item sm={12} xs={12} md={12} lg={12} xl={6}>
           <SkillTable

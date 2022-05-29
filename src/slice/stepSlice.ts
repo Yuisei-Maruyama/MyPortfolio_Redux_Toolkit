@@ -1,22 +1,22 @@
-import { Step } from "@/@types/types";
-import { createSlice } from "@reduxjs/toolkit";
+import { Step } from '@/@types/types'
+import { createSlice } from '@reduxjs/toolkit'
 
 export type StepsState = {
-    value: Step[]
+  value: Step[]
 }
 
 const initialState: StepsState = {
-    value: []
+  value: [],
 }
 
 export const stepSlice = createSlice({
-    name: 'steps',
-    initialState,
-    reducers: {
-        setSteps: (state, actions: {payload: Step[]}) => {
-					state.value = actions.payload
-        }
-    }
+  name: 'steps',
+  initialState,
+  reducers: {
+    setSteps: (state, actions: { payload: Step[] }) => {
+      state.value = actions.payload
+    },
+  },
 })
 
 export const { setSteps } = stepSlice.actions
