@@ -27,9 +27,9 @@ const getDesc = (packageName: string) => {
     case 'normalizr':
       return 'normalizr の説明です';
     case 'react':
-      return 'react の説明です';
+      return 'ユーザインタフェース構築のための JavaScript ライブラリ';
     case 'react-dom':
-      return 'react-dom の説明です';
+      return 'ルーティングを定義するためのライブラリ';
     case 'react-redux':
       return 'react-redux の説明です';
     case 'redux-persist':
@@ -47,9 +47,11 @@ const getDesc = (packageName: string) => {
     case 'eslint-config-next':
       return 'eslint-config-next の説明です';
     case 'ts-node':
-      return 'ts-node の説明です';
+      return 'typescript のファイルを単体で実行できるモジュール';
     case 'typescript':
-      return 'typescript の説明です';
+      return 'JavaScript に対して、静的型付けとクラスベースオブジェクト指向を加えた言語ライブラリ';
+    case 'axios':
+      return 'Promise ベースの HTTP Client ライブラリ'
     default:
       break;
   }
@@ -70,7 +72,7 @@ let tableBodyBase = '| 技術 | version | 備考 |\n| ---- | ------- | ---- |\n'
 
 for (let i = 0; i < name.length; i++) {
   tableBodyBase = tableBodyBase.concat(
-    `| ${name[i]} | ${version[i]} | ${getDesc(name[i])} |\n`
+    `| [${name[i]}](https://www.npmjs.com/package/${name[i]}) | ${version[i]} | ${getDesc(name[i])} |\n`
   );
 }
 
