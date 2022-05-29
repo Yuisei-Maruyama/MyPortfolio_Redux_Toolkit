@@ -1,3 +1,4 @@
+import { stepSlice } from '@/slice/stepSlice';
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from '../slice/counterSlice';
 
@@ -5,6 +6,7 @@ import counterReducer from '../slice/counterSlice';
 export const store = configureStore({
   reducer: {
     counter: counterReducer.reducer,
+    steps: stepSlice.reducer
   },
 });
 
