@@ -1,22 +1,13 @@
-import React from 'react'
-// import { GetStaticProps } from 'next'
-// import axios from 'axios';
+import React, { useEffect } from 'react'
 import { Step } from '@/@types/types';
 import { SkillTable } from '@/components'
+import { StepsState } from '@/slice/stepSlice';
+import { useSelector } from 'react-redux';
+import { Box, Grid } from '@mui/material'
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const res = await axios.get("http://localhost:3000/api/steps");
-//   const steps: Step[] = res.data
-//   return { props: { steps } }
-// }
+const SkillTables: React.FC = () => {
 
-type Props = {
-  steps: Step[]
-}
-
-const SkillTables: React.FC<Props> = (props: Props) => {
-
-  const { steps } = props
+  const steps = useSelector((state: {steps: StepsState}) => state.steps.value)
 
   const frontEndProps: Step[] = []
   const backEndProps: Step[] = []
@@ -31,18 +22,24 @@ const SkillTables: React.FC<Props> = (props: Props) => {
   })
 
   return (
-    <>
-      <SkillTable
-        title="Front-End Goal Image"
-        link="https://github.com/Yuisei-Maruyama/MyPortfolio"
-        frontEndProps={frontEndProps}
-      />
-      <SkillTable
-        title="Back-End Goal Image"
-        link="https://github.com/Yuisei-Maruyama/MyPortfolio_Backend"
-        backEndProps={backEndProps}
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container>
+        <Grid item sm={12} xs={12} md={12} lg={12} xl={6}>
+        <SkillTable
+          title="Front-End Goal Image"
+          link="https://github.com/Yuisei-Maruyama/MyPortfolio"
+          frontEndProps={frontEndProps}
+        />
+        </Grid>
+        <Grid item sm={12} xs={12} md={12} lg={12} xl={6}>
+          <SkillTable
+            title="Back-End Goal Image"
+            link="https://github.com/Yuisei-Maruyama/MyPortfolio_Backend"
+            backEndProps={backEndProps}
           />
-    </>
+        </Grid>
+      </Grid>
+    </Box>
   )
 }
 

@@ -53,7 +53,6 @@ const SkillTable: React.FC<Props> = (props: Props) => {
         backEndRows.push(createData(name, <Stepper steps={steps} activeStep={activeStep} />))
       })
     }
-
     // eslint-disable-next-line
   }, [])
 
