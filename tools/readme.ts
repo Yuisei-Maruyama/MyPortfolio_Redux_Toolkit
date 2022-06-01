@@ -1,6 +1,8 @@
 import packageJson from '../package.json';
 import { existsSync, writeFile, unlinkSync } from 'fs';
 
+/* eslint  no-multi-str: 0 */
+
 const { dependencies, devDependencies } = packageJson;
 
 const readme = ''
@@ -100,12 +102,12 @@ const getDesc = (packageName: string) => {
   return '';
 };
 
-Object.entries(dependencies).map(([key, value]) => {
+Object.entries(dependencies).forEach(([key, value]) => {
   name.push(key);
   version.push(value);
 });
 
-Object.entries(devDependencies).map(([key, value]) => {
+Object.entries(devDependencies).forEach(([key, value]) => {
   name.push(key);
   version.push(value);
 });
