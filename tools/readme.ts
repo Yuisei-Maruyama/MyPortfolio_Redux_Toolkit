@@ -1,19 +1,61 @@
 import packageJson from '../package.json';
-import { readFileSync, writeFile } from 'fs';
+import { existsSync, writeFile, unlinkSync } from 'fs';
 
-let readme = readFileSync('README.md', 'utf-8');
 const { dependencies, devDependencies } = packageJson;
 
-const targetHeadingIndex = readme.indexOf('### 使用パッケージ') + 11;
-// INFO: 使用パッケージテーブルを追加するための場所を指定
-const tableBodySetIndex = readme.indexOf('### コンポーネント作成にあたって');
+const readme = ''
 
-console.log(tableBodySetIndex - targetHeadingIndex);
-
-// 使用パッケージテーブルを更新
-if (tableBodySetIndex - targetHeadingIndex > 2) {
-  console.log('上書き');
+// INFO: README.mdが存在すれば、削除する
+if (existsSync('README.md')) {
+  unlinkSync('README.md')
 }
+
+const title = '# My Portfolio_Redux \n\n \
+## React + Redux + TypeScript \n\n \
+'
+
+const env = '### 環境構築 \n\n \
+```ts \n \
+npx create-next-app portfolio_redux --ts \n \
+``` \n\n \
+'
+
+const devEnv = ' ### 開発環境について \n\n \
+- Node.js v16.15.0 \n \
+- MacOS Monterey v12.4 \n\n \
+'
+
+const structure = '### ディレクトリ構成 \n\n \
+```ts \n \
+. \n \
+├── README.md \n \
+├── next-env.d.ts \n \
+├── next.config.js \n \
+├── node_modules \n \
+├── package-lock.json \n \
+├── package.json \n \
+├── pages \n \
+│   ├── _app.tsx          全ページで必要な処理を書くファイル(ページ間の共通レイアウト・共通のstate・グローバルなCSS・各Routeコンポーネントのラップ・ReduxのProvider設定など) \n \
+│   ├── api \n \
+│   └── index.tsx         実際に画面表示するファイル \n \
+├── public \n \
+│   ├── favicon.ico \n \
+│   └── vercel.svg \n \
+├── src \n \
+│   ├── components        各コンポーネントを定義するファイル \n \
+│   ├── slice             各storeのモジュールを設定するファイル \n \
+│   └── store             storeの設定を記述するファイル \n \
+├── styles \n \
+│   ├── Home.module.css   特定のファイルに対するCSSモジュール \n \
+│   └── globals.css       全てのページに対応できるCSS \n \
+├── tools                 自動化スクリプトを定義するディレクトリ \n \
+│   ├── package.json      ESモジュールを解釈できるようにするために設置 \n \
+│   ├── readme.ts         README.mdに書き込むためのスクリプトを定義するファイル \n \
+│   └── tsconfig.json \n \
+├── tsconfig.json \n \
+└── yarn.lock \n \
+``` \n\n \
+'
 
 const name: string[] = [];
 const version: string[] = [];
@@ -68,18 +110,25 @@ Object.entries(devDependencies).map(([key, value]) => {
   version.push(value);
 });
 
-let tableBodyBase = '| 技術 | version | 備考 |\n| ---- | ------- | ---- |\n';
+let tableBody = '| 技術 | version | 備考 |\n| ---- | ------- | ---- |\n';
 
 for (let i = 0; i < name.length; i++) {
-  tableBodyBase = tableBodyBase.concat(
+  tableBody = tableBody.concat(
     `| [${name[i]}](https://www.npmjs.com/package/${name[i]}) | ${version[i]} | ${getDesc(name[i])} |\n`
   );
 }
 
-const convertReadme =
-  readme.slice(0, tableBodySetIndex) +
-  `${tableBodyBase}\n` +
-  readme.slice(tableBodySetIndex);
+const packageList = `### 使用パッケージ \n\n${tableBody}\n`
+
+const createComKnowledge = '### コンポーネント作成にあたって \n\n \
+VSCode の拡張機能 `Next.js snippets` を導入し、下記を実行する。\n\n \
+```ts \n \
+nafe; \n \
+``` \n \
+'
+
+const convertReadme = readme.concat(title, env, devEnv, structure, packageList, createComKnowledge )
+
 
 writeFile('README.md', convertReadme, (err) => {
   if (err) throw err;
