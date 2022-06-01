@@ -16,6 +16,10 @@ const title = '# My Portfolio_Redux\n\n\
 ## React + Redux + TypeScript\n\n\
 '
 
+const info = '### 本READMEについて\n\n\
+本READMEは `tools/readme.ts` によって自動生成されます。\n\n\
+'
+
 const env = '### 環境構築\n\n\
 ```ts\n\
 npx create-next-app portfolio_redux --ts\n\
@@ -131,7 +135,7 @@ nafe;\n\
 ```\n\
 '
 
-const convertReadme = readme.concat(title, env, devEnv, structure, packageList, createComKnowledge)
+const convertReadme = readme.concat(title, info, env, devEnv, structure, packageList, createComKnowledge)
 
 writeFile('README.md', convertReadme, (err) => {
   if (err) throw err
