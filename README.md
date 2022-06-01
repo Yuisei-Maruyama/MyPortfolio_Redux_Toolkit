@@ -2,9 +2,9 @@
 
 ## React + Redux + TypeScript
 
-### 本READMEについて
+### READMEについて
 
-本READMEは `tools/readme.ts` によって自動生成されます。
+`README.md` は `tools/readme.ts` によって自動生成されます。
 
 ### 環境構築
 
