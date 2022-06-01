@@ -16,8 +16,8 @@ const title = '# My Portfolio_Redux\n\n\
 ## React + Redux + TypeScript\n\n\
 '
 
-const info = '### 本READMEについて\n\n\
-本READMEは `tools/readme.ts` によって自動生成されます。\n\n\
+const info = '### READMEについて\n\n\
+`README.md` は `tools/readme.ts` によって自動生成されます。\n\n\
 '
 
 const env = '### 環境構築\n\n\
