@@ -57,7 +57,9 @@ npx create-next-app portfolio_redux --ts
 | [@emotion/styled](https://www.npmjs.com/package/@emotion/styled) | ^11.8.1 |  |
 | [@mui/material](https://www.npmjs.com/package/@mui/material) | ^5.8.1 |  |
 | [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit) | ^1.8.1 | @reduxjs/toolkit の説明です |
+| [@types/styled-components](https://www.npmjs.com/package/@types/styled-components) | ^5.1.25 |  |
 | [axios](https://www.npmjs.com/package/axios) | ^0.27.2 | Promise ベースの HTTP Client ライブラリ |
+| [eslint-plugin-styled-components-varname](https://www.npmjs.com/package/eslint-plugin-styled-components-varname) | ^1.0.1 |  |
 | [mongodb](https://www.npmjs.com/package/mongodb) | ^4.6.0 |  |
 | [next](https://www.npmjs.com/package/next) | 12.1.6 | next の説明です |
 | [normalizr](https://www.npmjs.com/package/normalizr) | ^3.6.2 | normalizr の説明です |
@@ -65,6 +67,7 @@ npx create-next-app portfolio_redux --ts
 | [react-dom](https://www.npmjs.com/package/react-dom) | 18.1.0 | ルーティングを定義するためのライブラリ |
 | [react-redux](https://www.npmjs.com/package/react-redux) | ^8.0.1 | react-redux の説明です |
 | [redux-persist](https://www.npmjs.com/package/redux-persist) | ^6.0.0 | Storeの状態を永続化するパッケージ |
+| [styled-components](https://www.npmjs.com/package/styled-components) | ^5.3.5 |  |
 | [@types/node](https://www.npmjs.com/package/@types/node) | 17.0.35 | @types/node の説明です |
 | [@types/react](https://www.npmjs.com/package/@types/react) | 18.0.9 | @types/react の説明です |
 | [@types/react-dom](https://www.npmjs.com/package/@types/react-dom) | 18.0.4 | @types/react-dom の説明です |
