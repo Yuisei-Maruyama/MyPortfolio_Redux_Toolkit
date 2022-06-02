@@ -53,7 +53,7 @@ npx create-next-app portfolio_redux --ts
 
 | 技術 | version | 備考 |
 | ---- | ------- | ---- |
-| [@emotion/react](https://www.npmjs.com/package/@emotion/react) | ^11.9.0 | @emotion/reactの説明です |
+| [@emotion/react](https://www.npmjs.com/package/@emotion/react) | ^11.9.0 | @emotion/reactの説明 |
 | [@emotion/styled](https://www.npmjs.com/package/@emotion/styled) | ^11.8.1 |  |
 | [@mui/material](https://www.npmjs.com/package/@mui/material) | ^5.8.1 |  |
 | [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit) | ^1.8.1 | @reduxjs/toolkit の説明です |

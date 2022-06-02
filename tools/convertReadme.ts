@@ -42,7 +42,7 @@ const getDesc = (packageName: string) => {
     case 'axios':
       return 'Promise ベースの HTTP Client ライブラリ'
     case '@emotion/react':
-      return '@emotion/reactの説明です'
+      return '@emotion/reactの説明'
     default:
       break
   }
