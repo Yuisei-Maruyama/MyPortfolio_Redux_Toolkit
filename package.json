@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && eslint --fix './tools/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}' && prettier --write './tools/**/*.{js,ts,tsx}' && npx ts-node tools/readme.ts",
+    "lint-fix": "eslint --fix './src/**/*.{js,ts,tsx}' && eslint --fix './tools/**/*.{js,ts,tsx}' && prettier --write './src/**/*.{js,ts,tsx}' && prettier --write './tools/**/*.{js,ts,tsx}' && npx ts-node tools/convertReadme.ts",
     "prepare": "husky install"
   },
   "dependencies": {
