@@ -4,7 +4,7 @@
 
 ### READMEについて
 
-`README.md`の `### 使用パッケージ` は [`tools/convertReadme.ts`](https://github.com/Yuisei-Maruyama/MyPortfolio_Redux/blob/main/tools/convertReadme.ts) によって自動更新されます。
+`README.md`の `### 使用パッケージ` は [tools/convertReadme.ts](https://github.com/Yuisei-Maruyama/MyPortfolio_Redux/blob/main/tools/convertReadme.ts) によって自動更新されます。
 
 ### 環境構築
 
