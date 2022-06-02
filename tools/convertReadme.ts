@@ -78,5 +78,3 @@ writeFile(
     console.log('正常に書き込みが完了しました')
   }
 )
-
-

@@ -4,7 +4,7 @@
 
 ### READMEについて
 
-`README.md` は `tools/readme.ts` によって自動生成されます。
+`README.md`の `### 使用パッケージ` は `tools/readme.ts` によって自動更新されます。
 
 ### 環境構築
 
