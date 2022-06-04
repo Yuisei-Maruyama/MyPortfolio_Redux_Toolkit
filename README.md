@@ -73,6 +73,7 @@ npx create-next-app portfolio_redux --ts
 | [@types/react-dom](https://www.npmjs.com/package/@types/react-dom) | 18.0.4 | @types/react-dom の説明です |
 | [@types/react-redux](https://www.npmjs.com/package/@types/react-redux) | ^7.1.24 | @types/react-redux の説明です |
 | [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) | ^5.26.0 |  |
+| [babel-plugin-styled-components](https://www.npmjs.com/package/babel-plugin-styled-components) | ^2.0.7 |  |
 | [eslint](https://www.npmjs.com/package/eslint) | 8.16.0 | eslint の説明です |
 | [eslint-config-next](https://www.npmjs.com/package/eslint-config-next) | 12.1.6 | eslint-config-next の説明です |
 | [eslint-config-prettier](https://www.npmjs.com/package/eslint-config-prettier) | ^8.5.0 |  |
