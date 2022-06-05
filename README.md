@@ -57,7 +57,7 @@ npx create-next-app portfolio_redux --ts
 | [@emotion/styled](https://www.npmjs.com/package/@emotion/styled) | ^11.8.1 |  |
 | [@mui/material](https://www.npmjs.com/package/@mui/material) | ^5.8.1 |  |
 | [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit) | ^1.8.1 | @reduxjs/toolkit の説明です |
-| [@types/styled-components](https://www.npmjs.com/package/@types/styled-components) | ^5.1.25 |  |
+| [@types/styled-components](https://www.npmjs.com/package/@types/styled-components) | ^5.1.25 | styled-componentsの型定義ファイル |
 | [axios](https://www.npmjs.com/package/axios) | ^0.27.2 | Promise ベースの HTTP Client ライブラリ |
 | [eslint-plugin-styled-components-varname](https://www.npmjs.com/package/eslint-plugin-styled-components-varname) | ^1.0.1 |  |
 | [mongodb](https://www.npmjs.com/package/mongodb) | ^4.6.0 |  |
@@ -72,7 +72,7 @@ npx create-next-app portfolio_redux --ts
 | [@types/react](https://www.npmjs.com/package/@types/react) | 18.0.9 | @types/react の説明です |
 | [@types/react-dom](https://www.npmjs.com/package/@types/react-dom) | 18.0.4 | @types/react-dom の説明です |
 | [@types/react-redux](https://www.npmjs.com/package/@types/react-redux) | ^7.1.24 | @types/react-redux の説明です |
-| [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) | ^5.26.0 |  |
+| [@typescript-eslint/eslint-plugin](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) | ^5.26.0 | undefinedの型定義ファイル |
 | [babel-plugin-styled-components](https://www.npmjs.com/package/babel-plugin-styled-components) | ^2.0.7 |  |
 | [eslint](https://www.npmjs.com/package/eslint) | 8.16.0 | eslint の説明です |
 | [eslint-config-next](https://www.npmjs.com/package/eslint-config-next) | 12.1.6 | eslint-config-next の説明です |

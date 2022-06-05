@@ -46,6 +46,9 @@ const getDesc = (packageName: string) => {
     default:
       break
   }
+  if (packageName.startsWith('@types')) {
+    return `${packageName.split('@types/')[1]}の型定義ファイル`
+  }
   return ''
 }
 
