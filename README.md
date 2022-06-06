@@ -59,6 +59,7 @@ npx create-next-app portfolio_redux --ts
 | [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit) | ^1.8.1 | @reduxjs/toolkit の説明です |
 | [@types/styled-components](https://www.npmjs.com/package/@types/styled-components) | ^5.1.25 | styled-componentsの型定義ファイル |
 | [axios](https://www.npmjs.com/package/axios) | ^0.27.2 | Promise ベースの HTTP Client ライブラリ |
+| [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) | ^26.5.3 |  |
 | [eslint-plugin-styled-components-varname](https://www.npmjs.com/package/eslint-plugin-styled-components-varname) | ^1.0.1 |  |
 | [mongodb](https://www.npmjs.com/package/mongodb) | ^4.6.0 |  |
 | [next](https://www.npmjs.com/package/next) | 12.1.6 | next の説明です |
@@ -68,6 +69,10 @@ npx create-next-app portfolio_redux --ts
 | [react-redux](https://www.npmjs.com/package/react-redux) | ^8.0.1 | react-redux の説明です |
 | [redux-persist](https://www.npmjs.com/package/redux-persist) | ^6.0.0 | Storeの状態を永続化するパッケージ |
 | [styled-components](https://www.npmjs.com/package/styled-components) | ^5.3.5 |  |
+| [@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom) | ^5.16.4 |  |
+| [@testing-library/react](https://www.npmjs.com/package/@testing-library/react) | ^13.3.0 |  |
+| [@testing-library/user-event](https://www.npmjs.com/package/@testing-library/user-event) | ^14.2.0 |  |
+| [@types/jest](https://www.npmjs.com/package/@types/jest) | ^28.1.1 | jestの型定義ファイル |
 | [@types/node](https://www.npmjs.com/package/@types/node) | 17.0.35 | @types/node の説明です |
 | [@types/react](https://www.npmjs.com/package/@types/react) | 18.0.9 | @types/react の説明です |
 | [@types/react-dom](https://www.npmjs.com/package/@types/react-dom) | 18.0.4 | @types/react-dom の説明です |
@@ -84,9 +89,12 @@ npx create-next-app portfolio_redux --ts
 | [eslint-plugin-react](https://www.npmjs.com/package/eslint-plugin-react) | ^7.30.0 |  |
 | [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks) | ^4.5.0 |  |
 | [husky](https://www.npmjs.com/package/husky) | ^8.0.0 |  |
+| [jest](https://www.npmjs.com/package/jest) | ^28.1.0 |  |
+| [jest-environment-jsdom](https://www.npmjs.com/package/jest-environment-jsdom) | ^28.1.0 |  |
 | [lint-staged](https://www.npmjs.com/package/lint-staged) | ^11.1.2 |  |
 | [polished](https://www.npmjs.com/package/polished) | ^4.2.2 |  |
 | [prettier](https://www.npmjs.com/package/prettier) | ^2.6.2 |  |
+| [sass](https://www.npmjs.com/package/sass) | ^1.52.2 |  |
 | [ts-node](https://www.npmjs.com/package/ts-node) | ^10.7.0 | typescript のファイルを単体で実行できるモジュール |
 | [typescript](https://www.npmjs.com/package/typescript) | 4.6.4 | JavaScript に対して、静的型付けとクラスベースオブジェクト指向を加えた言語ライブラリ |
 
