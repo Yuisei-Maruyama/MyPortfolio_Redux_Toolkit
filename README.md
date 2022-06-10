@@ -92,6 +92,7 @@ npx create-next-app portfolio_redux --ts
 | [jest](https://www.npmjs.com/package/jest) | ^28.1.0 |  |
 | [jest-environment-jsdom](https://www.npmjs.com/package/jest-environment-jsdom) | ^28.1.0 |  |
 | [lint-staged](https://www.npmjs.com/package/lint-staged) | ^11.1.2 |  |
+| [modern-css-reset](https://www.npmjs.com/package/modern-css-reset) | ^1.4.0 |  |
 | [polished](https://www.npmjs.com/package/polished) | ^4.2.2 |  |
 | [prettier](https://www.npmjs.com/package/prettier) | ^2.6.2 |  |
 | [sass](https://www.npmjs.com/package/sass) | ^1.52.2 |  |

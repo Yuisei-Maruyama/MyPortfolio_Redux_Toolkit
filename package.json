@@ -54,6 +54,7 @@
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
     "lint-staged": "^11.1.2",
+    "modern-css-reset": "^1.4.0",
     "polished": "^4.2.2",
     "prettier": "^2.6.2",
     "sass": "^1.52.2",
