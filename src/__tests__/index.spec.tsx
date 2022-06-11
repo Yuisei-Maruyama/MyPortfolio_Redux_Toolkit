@@ -5,23 +5,21 @@ import Home from '../pages/index'
 import '@testing-library/jest-dom'
 import { Step } from '@/@types/types'
 
-
-
 const dummyStepsProps: Step[] = [
   {
     name: 'test1',
     activeStep: 2,
     steps: ['step1', 'step2'],
     id: '1',
-    genre: 'FrontEnd'
+    genre: 'FrontEnd',
   },
   {
     name: 'test2',
     activeStep: 2,
     steps: ['step1', 'step2'],
     id: '2',
-    genre: 'BackEnd'
-  }
+    genre: 'BackEnd',
+  },
 ]
 describe('Homeコンポーネント', () => {
   beforeEach(() => {

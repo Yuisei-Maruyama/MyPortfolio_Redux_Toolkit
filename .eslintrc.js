@@ -29,7 +29,7 @@ module.exports = {
   ],
   rules: {
     'no-use-before-define': 'off', // import React from 'react' のエラー回避
-    '@typescript-eslint/no-use-before-define': ['error'],
+    '@typescript-eslint/no-use-before-define': ['error', { "variables": false }],
     'camelCase': 'off',
     'space-before-function-paren': 'off',
     'react/react-in-jsx-scope': 'off',

@@ -1,19 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
-        height: 40,
-        borderTop: 'solid 1px #06D8D7',
-      }}
-    >
+    <_Footer>
       <p style={{ marginRight: 10 }}>created by Yuisei Maruyama</p>
-    </div>
+    </_Footer>
   )
 }
 
-export default Footer
+const _Footer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+  border-top: solid 1px #fe428e;
+`
