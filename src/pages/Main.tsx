@@ -3,7 +3,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { Step } from '@/@types/types'
 import { SkillTables } from '@/components'
-import variables from '../styles/variables.module.scss'
 
 type Props = {
   steps?: Step[]
@@ -23,7 +22,7 @@ interface TextProps {
 const Main: React.FC<Props> = ({ steps }) => {
   return (
     <_Container>
-      <p style={{ color: variables.primaryColor }}>aaaaaa</p>
+      <_Test>aaaaaa</_Test>
       <_Text>My Portfolio_Redux</_Text>
       <SkillTables></SkillTables>
     </_Container>
@@ -32,6 +31,10 @@ const Main: React.FC<Props> = ({ steps }) => {
 
 const _Container = styled.div`
   padding: 0;
+`
+
+const _Test = styled.p`
+  color: $primary;
 `
 
 const _Text = styled.p<TextProps>`

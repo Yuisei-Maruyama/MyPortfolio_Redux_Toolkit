@@ -18,5 +18,5 @@ const _Footer = styled.div`
   align-items: center;
   justify-content: flex-end;
   height: 40px;
-  border-top: solid 1px #fe428e;
+  border-top: solid 1px #188fb9;
 `

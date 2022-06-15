@@ -1,0 +1,51 @@
+@import './_variables.scss';
+
+@font-face {
+  font-family: "NewCircusFont";
+  src: local("NewCircus"),
+    url("../fonts/newcircus-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "BreakingBadFont";
+  src: local("BreakingBad"),
+    url("../fonts/breaking-bad.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "CyberTechFont";
+  src: local("CyberTech"),
+    url("../fonts/cyberfont-Regular.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "TronFont";
+  src: local("Tron"),
+    url("../fonts/tron.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HachiMaruPopFont";
+  src: local("HachiMaruPop"),
+    url("../fonts/HachiMaruPop-Regular.ttf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: $bg-color;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  color: $primary;
+}

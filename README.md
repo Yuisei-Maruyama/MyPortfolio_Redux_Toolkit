@@ -99,6 +99,7 @@ npx create-next-app portfolio_redux --ts
 | [sass](https://www.npmjs.com/package/sass) | ^1.52.2 |  |
 | [ts-node](https://www.npmjs.com/package/ts-node) | ^10.7.0 | typescript のファイルを単体で実行できるモジュール |
 | [typescript](https://www.npmjs.com/package/typescript) | 4.6.4 | JavaScript に対して、静的型付けとクラスベースオブジェクト指向を加えた言語ライブラリ |
+| [typescript-styled-plugin](https://www.npmjs.com/package/typescript-styled-plugin) | ^0.18.2 |  |
 
 ### コンポーネント作成にあたって
 
