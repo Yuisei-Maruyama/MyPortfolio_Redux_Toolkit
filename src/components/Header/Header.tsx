@@ -12,5 +12,5 @@ export const Header: React.FC = () => {
       <SiNetlify />
       <BiTask />
     </div>
-  );
+  )
 }

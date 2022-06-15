@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { Step } from '@/@types/types'
 import axios from 'axios'
 import { setSteps } from '@/slice/stepSlice'
-import {SkillTables } from '@/components'
+import { SkillTables } from '@/components'
 import variables from '../styles/variables.module.scss'
 
 type Props = {
@@ -24,7 +24,6 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const Main: React.FC<Props> = ({ steps }) => {
-
   // // src/store/store.ts の counter を指している。
   const dispatch = useDispatch()
 
@@ -39,7 +38,7 @@ const Main: React.FC<Props> = ({ steps }) => {
       <_Text>My Portfolio_Redux</_Text>
       <SkillTables></SkillTables>
     </_Container>
-  );
+  )
 }
 
 const _Container = styled.div`
@@ -51,4 +50,4 @@ const _Text = styled.p<TextProps>`
   color: ${(p) => p.color};
 `
 
-export default Main;
+export default Main

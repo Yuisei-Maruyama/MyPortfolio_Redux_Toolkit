@@ -6,10 +6,7 @@ import Main from './Main'
 // } from 'portfolio/src/components'
 
 const Home: NextPageWithLayout = () => {
-
-  return (
-    <Main />
-  )
+  return <Main />
 }
 
 Home.getLayout = (page) => <Layout>{page}</Layout>
