@@ -30,25 +30,21 @@ export const fetchStepsData = createAsyncThunk('api/steps', async () => {
 export const stepSlice = createSlice({
   name: 'steps',
   initialState,
-  reducers: {
-    setSteps: (state, actions: { payload: Step[] }) => {
-      state.value = actions.payload
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
+    // 非同期実行中、または実行待ち
     builder.addCase(fetchStepsData.pending, (state, _) => {
-      // 非同期実行中、または実行待ち
       state.loading = true
       state.error.status = false
       state.error.message = null
     })
+    // 実行が正常完了（エラーなし）
     builder.addCase(fetchStepsData.fulfilled, (state, actions) => {
-      // 実行が正常完了（エラーなし）
       state.loading = false
       state.value = new Array(...actions.payload)
     })
+    // 実行で何かの異常発生
     builder.addCase(fetchStepsData.rejected, (state, _) => {
-      // 実行で何かの異常発生
       state.loading = true
       state.error.status = true
       state.error.message = 'cant fetched data from MongoDB'
