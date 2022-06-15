@@ -21,7 +21,6 @@ interface TextProps {
 // }
 
 const Main: React.FC<Props> = ({ steps }) => {
-
   return (
     <_Container>
       <p style={{ color: variables.primaryColor }}>aaaaaa</p>
