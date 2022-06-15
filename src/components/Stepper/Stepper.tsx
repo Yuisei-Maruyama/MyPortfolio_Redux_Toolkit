@@ -26,11 +26,7 @@ const Stepper: React.FC<Props> = (props: Props) => {
 const $StepperWrapper = styled(BaseStepper)`
   & .MuiStepIcon-root.Mui-active {
     border-radius: 50%;
-    box-shadow:
-    0 0 10px azure,
-    0 0 20px aqua,
-    0 0 25px blue,
-    0 0 30px dodgerblue;
+    box-shadow: 0 0 10px azure, 0 0 20px aqua, 0 0 25px blue, 0 0 30px dodgerblue;
   }
   & .MuiStepLabel-label.Mui-completed {
     color: white;

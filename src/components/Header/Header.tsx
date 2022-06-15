@@ -6,7 +6,7 @@ import { TbBrandVercel } from 'react-icons/tb'
 import styled from 'styled-components'
 
 const handleClick = (name: string): React.MouseEventHandler<SVGElement> | undefined => {
-  switch(name) {
+  switch (name) {
     case 'Github':
       window.open('https://github.com/Yuisei-Maruyama/MyPortfolio_Redux_Toolkit', '_blank')
       return
@@ -24,24 +24,24 @@ const handleClick = (name: string): React.MouseEventHandler<SVGElement> | undefi
 const iconList = [
   {
     name: 'TaskBoard',
-    tag: BiTask
+    tag: BiTask,
   },
   {
     name: 'Github',
-    tag: AiFillGithub
+    tag: AiFillGithub,
   },
   {
     name: 'Vercel',
-    tag: TbBrandVercel
+    tag: TbBrandVercel,
   },
   {
     name: 'Mongodb',
-    tag: SiMongodb
+    tag: SiMongodb,
   },
   {
     name: 'Instagram',
-    tag: AiFillInstagram
-  }
+    tag: AiFillInstagram,
+  },
 ]
 
 export const Header: React.FC = () => {
@@ -49,13 +49,9 @@ export const Header: React.FC = () => {
     <_HeaderWrapper>
       <_Title>MY PORTFLIO</_Title>
       <_IconWrapper>
-        {
-          iconList.map((icon, index) => {
-            return (
-              <icon.tag key={index} onClick={() => handleClick(icon.name)} />
-            )
-          })
-        }
+        {iconList.map((icon, index) => {
+          return <icon.tag key={index} onClick={() => handleClick(icon.name)} />
+        })}
       </_IconWrapper>
     </_HeaderWrapper>
   )
