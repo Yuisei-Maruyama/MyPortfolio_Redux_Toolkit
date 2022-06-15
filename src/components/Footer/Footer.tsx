@@ -10,7 +10,11 @@ export const Footer: React.FC = () => {
 }
 
 const _Footer = styled.div`
+  width: 100%;
   display: flex;
+  position: fixed;
+  right: 0;
+  bottom: 0;
   align-items: center;
   justify-content: flex-end;
   height: 40px;

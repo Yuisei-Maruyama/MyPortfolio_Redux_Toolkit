@@ -66,6 +66,7 @@ npx create-next-app portfolio_redux --ts
 | [normalizr](https://www.npmjs.com/package/normalizr) | ^3.6.2 | normalizr の説明です |
 | [react](https://www.npmjs.com/package/react) | 18.1.0 | ユーザインタフェース構築のための JavaScript ライブラリ |
 | [react-dom](https://www.npmjs.com/package/react-dom) | 18.1.0 | ルーティングを定義するためのライブラリ |
+| [react-icons](https://www.npmjs.com/package/react-icons) | ^4.4.0 |  |
 | [react-redux](https://www.npmjs.com/package/react-redux) | ^8.0.1 | react-redux の説明です |
 | [redux-persist](https://www.npmjs.com/package/redux-persist) | ^6.0.0 | Storeの状態を永続化するパッケージ |
 | [styled-components](https://www.npmjs.com/package/styled-components) | ^5.3.5 |  |

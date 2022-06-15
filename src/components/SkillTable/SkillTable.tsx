@@ -80,7 +80,7 @@ const SkillTable: React.FC<Props> = (props: Props) => {
                 sx={{
                   cursor: 'pointer',
                   color: 'white',
-                  backgroundColor: rgba(97, 210, 141, 1),
+                  backgroundColor: rgba(168, 0, 81, 1),
                 }}
               >
                 {title}
@@ -92,7 +92,7 @@ const SkillTable: React.FC<Props> = (props: Props) => {
                   key={column.id}
                   align={column.align}
                   style={{ top: 57, minWidth: column.minWidth }}
-                  sx={{ color: 'white', backgroundColor: rgba(97, 211, 177, 0.7) }}
+                  sx={{ color: 'white', backgroundColor: rgba(81, 24, 58, 0.7) }}
                 >
                   {column.label}
                 </TableCell>

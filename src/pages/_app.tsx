@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { Provider } from 'react-redux'
 import '../styles/globals.css'
 import 'modern-css-reset/dist/reset.min.css'
-import type { AppProps } from 'next/app'
+import type { AppPropsWithLayout } from 'next/app'
 import { store } from '../store/store'
 
-function App({ Component, pageProps }: AppProps) {
-  return (
+function App({ Component, pageProps }: AppPropsWithLayout) {
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout ?? ((page: ReactElement) => page)
+
+  return getLayout(
     <Provider store={store}>
       <Component {...pageProps} />
     </Provider>
