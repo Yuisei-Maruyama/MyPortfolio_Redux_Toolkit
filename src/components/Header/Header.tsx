@@ -6,7 +6,7 @@ import { BiTask } from 'react-icons/bi'
 export const Header: React.FC = () => {
   return (
     <div>
-      <p>aaaaaaaa</p>
+      <p>MY PORTFLIO</p>
       <AiFillGithub />
       <AiFillInstagram />
       <SiNetlify />

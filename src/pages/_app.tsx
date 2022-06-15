@@ -1,7 +1,8 @@
 import React, { ReactElement } from 'react'
 import { Provider } from 'react-redux'
-import '../styles/globals.css'
 import 'modern-css-reset/dist/reset.min.css'
+import '../styles/globals.scss'
+import '../styles/variables.scss'
 import type { AppPropsWithLayout } from 'next/app'
 import { store } from '../store/store'
 
