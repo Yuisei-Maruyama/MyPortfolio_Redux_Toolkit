@@ -20,7 +20,7 @@ const _HeaderWrapper = styled.div`
   width: 100%;
   padding: 10px 15px;
   display: flex;
-  border: 1px solid #188FB9;
+  border: 1px solid #188fb9;
 `
 
 const _Title = styled.p`
