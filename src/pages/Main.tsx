@@ -34,7 +34,7 @@ const _Container = styled.div`
 `
 
 const _Test = styled.p`
-  color: primary;
+  color: $primary;
 `
 
 const _Text = styled.p<TextProps>`
