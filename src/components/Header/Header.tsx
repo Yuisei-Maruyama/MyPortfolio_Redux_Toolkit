@@ -10,6 +10,9 @@ const handleClick = (name: string): React.MouseEventHandler<SVGElement> | undefi
     case 'Github':
       window.open('https://github.com/Yuisei-Maruyama/MyPortfolio_Redux_Toolkit', '_blank')
       return
+    case 'Vercel':
+      window.open('https://vercel.com/yuisei-maruyama/my-portfolio-redux-toolkit', '_blank')
+      break
     case 'Mongodb':
       window.open('https://cloud.mongodb.com/v2/61339aa1734dde16310d755d#clusters', '_blank')
       return
