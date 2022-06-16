@@ -20,9 +20,10 @@ const initialState: StepsState = {
   },
 }
 
+const base = 'http://localhost:3000'
+
 export const fetchStepsData = createAsyncThunk('api/steps', async () => {
-  const basePath = window.location.href
-  const result: AxiosResponse<Step[]> = await axios.get(`${basePath}/api/steps`)
+  const result: AxiosResponse<Step[]> = await axios.get(`${base}/api/steps`)
   return result.data
 })
 

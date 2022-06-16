@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchStepsData, StepsState } from '@/slice/stepSlice'
 import { AppDispatch } from '@/store/store'
@@ -13,9 +13,12 @@ const SkillTables: React.FC = () => {
   const fetchSteps = useCallback(() => {
     dispatch(fetchStepsData())
   }, [dispatch])
+  // Stepper部分が再レンダリングされないので、やむ追えずstateに変化を与えることで対処する
+  const [stepsData, setStepsData] = useState<Step[]>([])
 
   useEffect(() => {
     if (steps.length === 0) return fetchSteps()
+    setStepsData(steps)
   }, [fetchSteps, steps])
 
   const frontEndProps: Step[] = []
@@ -30,7 +33,7 @@ const SkillTables: React.FC = () => {
     }
   })
 
-  return steps.length ? (
+  return stepsData && steps.length ? (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container>
         <Grid item sm={12} xs={12} md={12} lg={12} xl={6}>
