@@ -1,17 +1,16 @@
 import { MongoClient, Db } from 'mongodb'
 
-const { MONGODB_URI: uri, MONGODB_DB: dbName } = process.env
-
-console.log(process.env.MONGODB_URI)
+const NEXT_PUBLIC_MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI
+const NEXT_PUBLIC_MONGODB_DB = process.env.NEXT_PUBLIC_MONGODB_DB
 
 let cachedClient: MongoClient
 let cachedDb: Db
 
-if (!uri) {
+if (!NEXT_PUBLIC_MONGODB_URI) {
   throw new Error('Please define the MONGODB_URI environment variable inside .env.local')
 }
 
-if (!dbName) {
+if (!NEXT_PUBLIC_MONGODB_DB) {
   throw new Error('Please define the MONGODB_DB environment variable inside .env.local')
 }
 
@@ -20,9 +19,9 @@ export const connectToDatabase = async () => {
     return { client: cachedClient, db: cachedDb }
   }
 
-  const client = await MongoClient.connect(uri)
+  const client = await MongoClient.connect(NEXT_PUBLIC_MONGODB_URI)
 
-  const db = await client.db(dbName)
+  const db = await client.db(NEXT_PUBLIC_MONGODB_DB)
 
   cachedClient = client
   cachedDb = db
