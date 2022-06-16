@@ -30,6 +30,8 @@ const Main: React.FC<Props> = ({ steps }) => {
 }
 
 const _Container = styled.div`
+  width: 90%;
+  margin: 0 auto;
   padding: 0;
 `
 
