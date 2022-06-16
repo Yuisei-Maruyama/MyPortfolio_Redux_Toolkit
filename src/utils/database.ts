@@ -2,6 +2,8 @@ import { MongoClient, Db } from 'mongodb'
 
 const { MONGODB_URI: uri, MONGODB_DB: dbName } = process.env
 
+console.log(process.env.MONGODB_URI)
+
 let cachedClient: MongoClient
 let cachedDb: Db
 
