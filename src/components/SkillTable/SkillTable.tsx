@@ -100,19 +100,19 @@ const SkillTable: React.FC<Props> = (props: Props) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            { frontEndProps ?
-              frontEndRows.map((row, index) => (
-                <TableRow key={index}>
-                  {headers.map((column) => {
-                    const value = row[column.id]
-                    return (
-                      <TableCell key={column.id} align={column.align} sx={{ color: 'white' }}>
-                        {column.format && typeof value === 'number' ? column.format(value) : value}
-                      </TableCell>
-                    )
-                  })}
-                </TableRow>
-              ))
+            {frontEndProps
+              ? frontEndRows.map((row, index) => (
+                  <TableRow key={index}>
+                    {headers.map((column) => {
+                      const value = row[column.id]
+                      return (
+                        <TableCell key={column.id} align={column.align} sx={{ color: 'white' }}>
+                          {column.format && typeof value === 'number' ? column.format(value) : value}
+                        </TableCell>
+                      )
+                    })}
+                  </TableRow>
+                ))
               : backEndRows.map((row, index) => (
                   <TableRow key={index}>
                     {headers.map((column) => {
@@ -124,9 +124,7 @@ const SkillTable: React.FC<Props> = (props: Props) => {
                       )
                     })}
                   </TableRow>
-                )
-              )
-            }
+                ))}
           </TableBody>
         </Table>
       </TableContainer>
