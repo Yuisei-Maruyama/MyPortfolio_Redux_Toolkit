@@ -4,6 +4,11 @@ import { readdirSync, readFileSync } from 'fs'
 const documentsDir = path.join(process.cwd(), 'documents')
 const documentNames = readdirSync(documentsDir)
 
+export const getDocumentNames = () => {
+  return documentNames
+}
+
+
 // INFO: getStaticPath で使用するパス名を取得する
 // https://nextjs.org/docs/basic-features/data-fetching/get-static-paths
 export const getAllDocumentNames = () => {

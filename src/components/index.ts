@@ -1,5 +1,7 @@
 export { default as SkillTable } from './SkillTable/SkillTable'
 export { default as SkillTables } from './SkillTables/SkillTables'
 export { default as Stepper } from './Stepper/Stepper'
+export { default as DocumentList } from './DocumentList/DocumentList'
+export { default as MarkdownPreviewer } from './MarkdownPreviewer/MarkdownPreviewer'
 export { Footer } from './Footer/Footer'
 export { Header } from './Header/Header'
