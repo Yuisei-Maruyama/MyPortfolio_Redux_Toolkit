@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Header, Footer } from '@/components'
 
 type LayoutProps = Required<{
-  readonly children: ReactElement
+  readonly children: ReactElement | ReactElement[]
 }>
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
