@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import dynamic, { DynamicOptions, Loader } from 'next/dynamic'
 import styled from 'styled-components'
 
@@ -23,7 +23,7 @@ const MarkdownPreviewer: React.FC<Props> = ({ source }) => {
         <$MarkdownPreviewer source={source} />
       </_MarkdownWrapper>
     </div>
-  );
+  )
 }
 
 const _MarkdownWrapper = styled.div`
@@ -41,4 +41,4 @@ const $MarkdownPreviewer = styled(MarkdownPreview)`
   }
 `
 
-export default MarkdownPreviewer;
+export default MarkdownPreviewer

@@ -17,10 +17,8 @@ export const getStaticProps = () => {
   }
 }
 
-const Home: NextPageWithLayout<Props> = ({documentContents}) => {
-  return (
-    documentContents ? <Main documentContents={documentContents} /> : <></>
-  )
+const Home: NextPageWithLayout<Props> = ({ documentContents }) => {
+  return documentContents ? <Main documentContents={documentContents} /> : <></>
 }
 
 Home.getLayout = (page) => <Layout>{page}</Layout>

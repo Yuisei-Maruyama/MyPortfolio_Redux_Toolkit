@@ -1,11 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const Documents: React.FC = () => {
-  return (
-    <div>
-      Enter
-    </div>
-  );
+  return <div>Enter</div>
 }
 
-export default Documents;
+export default Documents

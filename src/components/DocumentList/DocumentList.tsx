@@ -4,18 +4,14 @@ type Props = {
   documentNames: string[]
 }
 
-const DocumentList: React.FC<Props> = ({documentNames}) => {
+const DocumentList: React.FC<Props> = ({ documentNames }) => {
   return (
     <>
-      {
-        documentNames.map((documentName, index) => {
-          return (
-            <p key={index}>{ documentName }</p>
-          )
-        })
-      }
+      {documentNames.map((documentName, index) => {
+        return <p key={index}>{documentName}</p>
+      })}
     </>
-  );
+  )
 }
 
-export default DocumentList;
+export default DocumentList
