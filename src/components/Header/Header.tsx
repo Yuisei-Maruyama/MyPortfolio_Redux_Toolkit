@@ -4,6 +4,7 @@ import { SiMongodb } from 'react-icons/si'
 import { BiTask } from 'react-icons/bi'
 import { TbBrandVercel } from 'react-icons/tb'
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const handleClick = (name: string): React.MouseEventHandler<SVGElement> | undefined => {
   switch (name) {
@@ -50,7 +51,14 @@ const iconList = [
 export const Header: React.FC = () => {
   return (
     <_HeaderWrapper>
-      <_Title>MY PORTFLIO</_Title>
+      <_MenuWrapper>
+        <Link href="/">
+          <_Title>MY PORTFLIO</_Title>
+        </Link>
+        <Link href="/documents">
+          <_MenuItem>Documents</_MenuItem>
+        </Link>
+      </_MenuWrapper>
       <_IconWrapper>
         {iconList.map((icon, index) => {
           return <icon.tag key={index} onClick={() => handleClick(icon.name)} />
@@ -69,9 +77,27 @@ const _HeaderWrapper = styled.div`
   border: 1px solid #188fb9;
 `
 
-const _Title = styled.p`
+const _MenuWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const _MenuItem = styled.a`
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  &:hover {
+    border-bottom: 1px solid #188fb9;
+  }
+`
+
+const _Title = styled.a`
   font-size: 55px;
   font-family: 'BreakingBadFont';
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
 `
 
 const _IconWrapper = styled.div`
