@@ -27,7 +27,7 @@ const Documents: React.FC<Props> = ({ documentNames }) => {
   )
 }
 
-export const _DocumentWrapper = styled.div`
+const _DocumentWrapper = styled.div`
   width: 90%;
   margin: 50px auto 0;
   display: flex;
