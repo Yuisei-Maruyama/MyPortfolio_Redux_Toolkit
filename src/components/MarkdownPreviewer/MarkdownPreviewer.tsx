@@ -29,7 +29,6 @@ const MarkdownPreviewer: React.FC<Props> = ({ source }) => {
 const _MarkdownWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  padding-top: 50px;
   overflow-x: scroll;
 `
 
