@@ -5,7 +5,6 @@ import Layout from '@/layout/Layout'
 import { getAllDocumentNames, getDocumentContent } from 'tools/readDocuments'
 import { Params } from '@/@types/types'
 import { MarkdownPreviewer, DocumentList } from '@/components'
-import { _DocumentWrapper } from '@/pages/documents'
 import styled from 'styled-components'
 
 type Props = {
@@ -50,6 +49,12 @@ const _MarkdownPreviewerWrapper = styled.div`
     width: 1500px;
     padding-bottom: 120px;
   }
+`
+
+const _DocumentWrapper = styled.div`
+  width: 90%;
+  margin: 50px auto 0;
+  display: flex;
 `
 
 export default Documents
