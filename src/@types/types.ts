@@ -1,3 +1,8 @@
+export type Params = {
+  id?: string
+  name?: string
+}
+
 export interface Step {
   name: string
   activeStep: number

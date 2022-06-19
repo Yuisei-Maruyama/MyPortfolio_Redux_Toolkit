@@ -58,11 +58,14 @@ npx create-next-app portfolio_redux --ts
 | [@mui/material](https://www.npmjs.com/package/@mui/material) | ^5.8.1 |  |
 | [@reduxjs/toolkit](https://www.npmjs.com/package/@reduxjs/toolkit) | ^1.8.1 | @reduxjs/toolkit の説明です |
 | [@types/styled-components](https://www.npmjs.com/package/@types/styled-components) | ^5.1.25 | styled-componentsの型定義ファイル |
+| [@uiw/react-markdown-preview](https://www.npmjs.com/package/@uiw/react-markdown-preview) | ^4.0.17 |  |
+| [@uiw/react-md-editor](https://www.npmjs.com/package/@uiw/react-md-editor) | ^3.14.4 |  |
 | [axios](https://www.npmjs.com/package/axios) | ^0.27.2 | Promise ベースの HTTP Client ライブラリ |
 | [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) | ^26.5.3 |  |
 | [eslint-plugin-styled-components-varname](https://www.npmjs.com/package/eslint-plugin-styled-components-varname) | ^1.0.1 |  |
 | [mongodb](https://www.npmjs.com/package/mongodb) | ^4.6.0 |  |
 | [next](https://www.npmjs.com/package/next) | 12.1.6 | next の説明です |
+| [next-remove-imports](https://www.npmjs.com/package/next-remove-imports) | ^1.0.6 |  |
 | [normalizr](https://www.npmjs.com/package/normalizr) | ^3.6.2 | normalizr の説明です |
 | [react](https://www.npmjs.com/package/react) | 18.1.0 | ユーザインタフェース構築のための JavaScript ライブラリ |
 | [react-dom](https://www.npmjs.com/package/react-dom) | 18.1.0 | ルーティングを定義するためのライブラリ |
