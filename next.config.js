@@ -5,6 +5,12 @@ const removeImports = require('next-remove-imports')({
   matchImports: "\\.(less|css|scss|sass|styl)$"
 })
 
+module.exports = {
+  env: {
+    ...require(`./config/${process.env.APP_ENV || 'local'}.json`),
+  },
+}
+
 const nextConfig = {
   reactStrictMode: true,
   async headers() {
